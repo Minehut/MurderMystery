@@ -142,18 +142,10 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.golde</groupId>
-            <artifactId>corpsereborn</artifactId>
+            <groupId>org.golde.bukkit.corpsereborn</groupId>
+            <artifactId>CorpseReborn</artifactId>
             <version>2.14.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/CorpseReborn.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>de.simonsator</groupId>
-            <artifactId>partyandfriends</artifactId>
-            <version>1.0.52</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/PAFSpigot.jar</systemPath>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.google.code.findbugs</groupId>
@@ -257,17 +249,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <!-- External beta versions discord deployer plugin -->
-            <plugin>
-                <groupId>plugily.projects</groupId>
-                <artifactId>betty-maven-plugin</artifactId>
-                <version>1.0.2</version>
-                <configuration>
-                    <changelogFile>${project.basedir}/CHANGELOG.md</changelogFile>
-                </configuration>
-            </plugin>
-            <!-- External beta versions discord deployer plugin -->
         </plugins>
         <extensions>
             <extension>

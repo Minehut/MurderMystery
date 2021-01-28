@@ -23,7 +23,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import pl.plajerlair.commonsbox.minecraft.configuration.ConfigUtils;
-import pl.plajerlair.commonsbox.minecraft.engine.ScriptEngine;
 import plugily.projects.murdermystery.Main;
 import plugily.projects.murdermystery.arena.Arena;
 import plugily.projects.murdermystery.arena.ArenaRegistry;
@@ -82,13 +81,6 @@ public class RewardsFactory {
             break;
           case PLAYER:
             player.performCommand(command);
-            break;
-          case SCRIPT:
-            ScriptEngine engine = new ScriptEngine();
-            engine.setValue("player", player);
-            engine.setValue("server", Bukkit.getServer());
-            engine.setValue("arena", arena);
-            engine.execute(command);
             break;
           default:
             break;
